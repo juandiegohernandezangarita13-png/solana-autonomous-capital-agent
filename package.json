@@ -1,0 +1,28 @@
+{
+  "name": "oobe-solana-capital-agent",
+  "version": "1.0.0",
+  "description": "Autonomous Capital Allocation & Risk-Guarded Execution Agent on Solana with MCP Support",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "test": "node --test dist/test/agent.test.js",
+    "mcp": "node dist/src/mcp/server.js"
+  },
+  "keywords": [
+    "solana",
+    "ai-agent",
+    "autonomous-agent",
+    "oobe-protocol",
+    "mcp",
+    "defi",
+    "jupiter-dex",
+    "capital-management"
+  ],
+  "author": "Juan Diego Hernandez (@juandiegohernandezangarita13-png)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}
