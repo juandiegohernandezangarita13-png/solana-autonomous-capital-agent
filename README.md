@@ -7,7 +7,14 @@
 [![MCP](https://img.shields.io/badge/Protocol-Model_Context_Protocol-cyan.svg)](https://modelcontextprotocol.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Interactive_Dashboard-success?style=for-the-badge&logo=vercel)](https://juandiegohernandezangarita13-png.github.io/solana-autonomous-capital-agent/)
+
 > **Autonomous on-chain capital allocation, risk-guarded portfolio rebalancing, and execution agent built for the OOBE Protocol ecosystem on Solana.**
+
+---
+
+### 🌐 [Live Interactive Web Dashboard](https://juandiegohernandezangarita13-png.github.io/solana-autonomous-capital-agent/)
+Explore the live agent simulator, trigger market shock scenarios, inspect Pyth oracle pricing, test risk guardrail circuit breakers, and view on-chain Jupiter DEX execution history.
 
 ---
 
