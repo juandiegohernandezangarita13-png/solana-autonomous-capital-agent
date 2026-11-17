@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OOBE Autonomous Capital Agent - Solana</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo-badge">⚡ OOBE</div>
+        <div>
+          <h1>Autonomous Capital Agent</h1>
+          <p class="subtitle">On-Chain Risk-Guarded Capital Allocation & Execution Protocol on Solana</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <div class="status-indicator active" id="agentStatusBadge">
+          <span class="status-dot"></span>
+          <span id="agentStatusText">AGENT ACTIVE</span>
+        </div>
+        <div class="wallet-pill" id="agentWalletAddress">
+          SOL: 14.50 | OOBE...agnt
+        </div>
+      </div>
+    </header>
+
+    <!-- Top KPI Row -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-title">TOTAL PORTFOLIO VALUE</div>
+        <div class="kpi-value" id="kpiTotalVal">$5,640.53</div>
+        <div class="kpi-sub positive" id="kpiPnl">+4.82% (24h)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">DAILY VOLUME USAGE</div>
+        <div class="kpi-value" id="kpiDailyVol">$850.00 <span class="kpi-limit">/ $10,000</span></div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="kpiVolFill" style="width: 8.5%"></div>
+        </div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">RISK GUARDRAILS</div>
+        <div class="kpi-value safe" id="kpiRiskStatus">STRICT ENFORCED</div>
+        <div class="kpi-sub">Max Slippage: 1.5% | Stop-Loss: 12%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">ORACLE LATENCY (PYTH)</div>
+        <div class="kpi-value" id="kpiLatency">380 ms</div>
+        <div class="kpi-sub positive">Confidence: ±0.05%</div>
+      </div>
+    </div>
+
+    <!-- Main Workspace -->
+    <div class="main-grid">
+      <!-- Left Column: Asset Allocation -->
+      <div class="panel">
+        <div class="panel-header">
+          <h2>📊 Target vs Current Allocation</h2>
+          <span class="badge">Dynamic Rebalancing</span>
+        </div>
+        <div class="asset-list" id="assetList">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="panel-header mt-4">
+          <h2>⚙️ Strategy Simulator & Controls</h2>
+        </div>
+        <div class="action-grid">
+          <button class="btn btn-primary" id="btnRunCycle">⚡ Trigger Autonomous Cycle</button>
+          <button class="btn btn-secondary" id="btnSimulateSolRally">📈 Simulate +15% SOL Rally</button>
+          <button class="btn btn-secondary" id="btnSimulateDrop">📉 Simulate -10% Market Drop</button>
+          <button class="btn btn-danger" id="btnCircuitBreaker">🚨 Emergency Circuit Breaker</button>
+        </div>
+      </div>
+
+      <!-- Right Column: Live Execution Stream -->
+      <div class="panel">
+        <div class="panel-header">
+          <h2>📜 Autonomous Execution Feed</h2>
+          <button class="btn-sm" id="btnClearLogs">Clear</button>
+        </div>
+        <div class="log-stream" id="logStream">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Trade History Table -->
+    <div class="panel mt-4">
+      <div class="panel-header">
+        <h2>🔄 On-Chain Jupiter DEX Execution History</h2>
+        <span class="badge" id="tradeCountBadge">3 Executed</span>
+      </div>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Strategy</th>
+              <th>Routing / Pair</th>
+              <th>Input</th>
+              <th>Output</th>
+              <th>Slippage</th>
+              <th>TX Signature</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tradeTableBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Architecture & OOBE Integration Banner -->
+    <div class="footer-card mt-4">
+      <div class="footer-info">
+        <h3>Built with OOBE Protocol Stack</h3>
+        <p>Featuring Model Context Protocol (MCP) tool server, Pyth Real-Time Price Feeds, Jupiter DEX Aggregator routing, and strict deterministic risk guardrails.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/juandiegohernandezangarita13-png/solana-autonomous-capital-agent" target="_blank" class="btn btn-outline">GitHub Repository</a>
+        <a href="https://earn.superteam.fun" target="_blank" class="btn btn-outline">Superteam Earn</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
